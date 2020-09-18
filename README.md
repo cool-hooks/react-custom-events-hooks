@@ -11,6 +11,8 @@
 
 ### Alternatives
 
+- [react-custom-events](https://github.com/HarshRohila/react-custom-events) by [Harsh Rohila](https://github.com/HarshRohila)
+
 ## How to Install
 
 First, install the library in your project by npm:

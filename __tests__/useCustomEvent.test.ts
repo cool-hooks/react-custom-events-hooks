@@ -10,4 +10,15 @@ describe('useCustomEvent', () => {
 
     // expect(result.sum(2, 3)).toBe(5);
   });
+
+  it('should', () => {
+    const { result } = renderHook(() =>
+      useCustomEvent({
+        eventName: 'myAwesomeCustomEvent',
+        onSignal: (e) => null,
+      })
+    );
+
+    // expect(result.sum(2, 3)).toBe(5);
+  });
 });
