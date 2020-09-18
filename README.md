@@ -30,7 +30,7 @@ $ yarn add react-custom-events
 **• Import hook in React application file:**
 
 ```js
-import {} from 'react-custom-events';
+import { useCustomEvent } from 'react-custom-events';
 ```
 
 #### Returned Values
@@ -38,7 +38,10 @@ import {} from 'react-custom-events';
 #### Example
 
 ```js
-
+const callMyAwesomeCustomEvent = useCustomEvent({
+  eventName: 'myAwesomeCustomEvent',
+  onSignal: (e) => console.log(e),
+});
 ```
 
 ## License
