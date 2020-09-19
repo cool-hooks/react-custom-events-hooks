@@ -4,4 +4,4 @@
 
 #### New Feature
 
-- added `useCustomEvent` hook
+- added `useCustomEvent`, `useEmitter` & `useListener` hooks

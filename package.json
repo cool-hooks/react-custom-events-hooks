@@ -25,6 +25,10 @@
   },
   "keywords": [
     "react",
+    "events",
+    "emitter",
+    "listener",
+    "observable",
     "hooks"
   ],
   "bugs": {
