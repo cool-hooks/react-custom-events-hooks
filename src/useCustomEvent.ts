@@ -8,7 +8,5 @@ interface Params {
 export const useCustomEvent = ({ eventName, onSignal }: Params) => {
   useListener(eventName, onSignal!);
 
-  const callEvent = useEmitter;
-
-  return callEvent;
+  return useEmitter;
 };
