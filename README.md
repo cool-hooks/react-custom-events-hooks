@@ -40,10 +40,58 @@ import { useCustomEvent } from 'react-custom-events';
 #### Example
 
 ```js
-const callMyAwesomeCustomEvent = useCustomEvent({
-  eventName: 'myAwesomeCustomEvent',
-  onSignal: (e) => console.log(e),
-});
+// App.js
+
+// emit + listen
+const App = () => {
+  const [message, setMessage] = useState('');
+
+  const callMyEvent = useCustomEvent({
+    eventName: 'myAwesomeCustomEvent',
+    onSignal: (e) => setMessage(e.detail.message),
+  });
+
+  return (
+    <>
+      <p>{message}</p>
+
+      <button onClick={() => callMyEvent({ message: 'Hello World!' })}>
+        Say Hello!
+      </button>
+    </>
+  );
+};
+
+// only emit
+const App = () => {
+  const callMyEvent = useCustomEvent({
+    eventName: 'myAwesomeCustomEvent',
+  });
+
+  return (
+    <>
+      <button onClick={() => callMyEvent({ message: 'Hello World!' })}>
+        Say Hello!
+      </button>
+    </>
+  );
+};
+
+// only listen
+const App = () => {
+  const [message, setMessage] = useState('');
+
+  useCustomEvent({
+    eventName: 'myAwesomeCustomEvent',
+    onSignal: (e) => setMessage(e.detail.message),
+  });
+
+  return (
+    <>
+      <p>{message}</p>
+    </>
+  );
+};
 ```
 
 ## License
