@@ -43,7 +43,8 @@ import { useCustomEvent } from 'react-custom-events';
 import React from 'react';
 import { useCustomEvent } from 'react-custom-events';
 
-// emit + listen
+/* ------ Emit + Listen Example ------ */
+
 const EmitListenExample = () => {
   const [message, setMessage] = useState('');
 
@@ -63,7 +64,8 @@ const EmitListenExample = () => {
   );
 };
 
-// only emit
+/* ------ Only Emit Example ------ */
+
 const EmitExample = () => {
   const callMyEvent = useCustomEvent({
     eventName: 'myAwesomeCustomEvent',
@@ -78,7 +80,8 @@ const EmitExample = () => {
   );
 };
 
-// only listen
+/* ------ Only Listen Example ------ */
+
 const ListenExample = () => {
   const [message, setMessage] = useState('');
 
