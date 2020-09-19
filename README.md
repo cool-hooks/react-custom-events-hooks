@@ -12,6 +12,8 @@
 ### Alternatives
 
 - [react-custom-events](https://github.com/HarshRohila/react-custom-events) by [Harsh Rohila](https://github.com/HarshRohila)
+- [@use-it/event-listener](https://github.com/donavon/use-event-listener) by [Donavon West](https://github.com/donavon)
+- [react-event-hooks](https://github.com/Eldorean/react-events-hooks) by [Silvester Wilson Wennekers](https://github.com/Eldorean)
 
 ## How to Install
 
