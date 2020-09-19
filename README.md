@@ -40,10 +40,11 @@ import { useCustomEvent } from 'react-custom-events';
 #### Example
 
 ```js
-// App.js
+import React from 'react';
+import { useCustomEvent } from 'react-custom-events';
 
 // emit + listen
-const App = () => {
+const EmitListenExample = () => {
   const [message, setMessage] = useState('');
 
   const callMyEvent = useCustomEvent({
@@ -63,7 +64,7 @@ const App = () => {
 };
 
 // only emit
-const App = () => {
+const EmitExample = () => {
   const callMyEvent = useCustomEvent({
     eventName: 'myAwesomeCustomEvent',
   });
@@ -78,7 +79,7 @@ const App = () => {
 };
 
 // only listen
-const App = () => {
+const ListenExample = () => {
   const [message, setMessage] = useState('');
 
   useCustomEvent({
