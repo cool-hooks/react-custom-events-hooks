@@ -29,10 +29,10 @@ $ yarn add react-custom-events
 
 ## Getting Started
 
-**• Import hook in React application file:**
+**• Import hooks in React application file:**
 
 ```js
-import { useCustomEvent } from 'react-custom-events';
+import { useCustomEvent, useEmitter, useListener } from 'react-custom-events';
 ```
 
 #### Returned Values
@@ -41,7 +41,7 @@ import { useCustomEvent } from 'react-custom-events';
 
 ```js
 import React from 'react';
-import { useCustomEvent } from 'react-custom-events';
+import { useCustomEvent, useEmitter, useListener } from 'react-custom-events';
 
 /* ------ Emit + Listen Example ------ */
 
@@ -64,7 +64,7 @@ const EmitListenExample = () => {
   );
 };
 
-/* ------ Only Emit Example ------ */
+/* ------ Only Emit Example 1 ------ */
 
 const EmitExample = () => {
   const callMyEvent = useCustomEvent({
@@ -80,7 +80,21 @@ const EmitExample = () => {
   );
 };
 
-/* ------ Only Listen Example ------ */
+/* ------ Only Emit Example 2 ------ */
+
+const EmitExample = () => {
+  const callMyEvent = useEmitter('myAwesomeCustomEvent');
+
+  return (
+    <>
+      <button onClick={() => callMyEvent({ message: 'Hello World!' })}>
+        Say Hello!
+      </button>
+    </>
+  );
+};
+
+/* ------ Only Listen Example 1 ------ */
 
 const ListenExample = () => {
   const [message, setMessage] = useState('');
@@ -89,6 +103,20 @@ const ListenExample = () => {
     eventName: 'myAwesomeCustomEvent',
     onSignal: (e) => setMessage(e.detail.message),
   });
+
+  return (
+    <>
+      <p>{message}</p>
+    </>
+  );
+};
+
+/* ------ Only Listen Example 2 ------ */
+
+const ListenExample = () => {
+  const [message, setMessage] = useState('');
+
+  useListener('myAwesomeCustomEvent', (e) => setMessage(e.detail.message));
 
   return (
     <>
