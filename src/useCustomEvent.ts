@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useListener, useEmitter } from '.';
 
 interface Params {
   readonly eventName: string;
@@ -6,21 +6,9 @@ interface Params {
 }
 
 export const useCustomEvent = ({ eventName, onSignal }: Params) => {
-  useEffect(() => {
-    const handleSignal = (e: Event) => {
-      if (onSignal) onSignal(e as CustomEvent);
-    };
+  useListener(eventName, onSignal!);
 
-    window.addEventListener(eventName, handleSignal);
-
-    return () => window.removeEventListener(eventName, handleSignal);
-  }, []);
-
-  const callEvent = <T>(data: T) => {
-    const event = new CustomEvent(eventName, { detail: data });
-
-    window.dispatchEvent(event);
-  };
+  const callEvent = useEmitter;
 
   return callEvent;
 };
