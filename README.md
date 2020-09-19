@@ -9,6 +9,8 @@
 
 ## About
 
+Create custom events. Fast, simple, fun
+
 ### Alternatives
 
 - [react-custom-events](https://github.com/HarshRohila/react-custom-events) by [Harsh Rohila](https://github.com/HarshRohila)
