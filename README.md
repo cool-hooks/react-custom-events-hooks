@@ -44,7 +44,7 @@ import { useCustomEvent, useEmitter, useListener } from 'react-custom-events-hoo
 #### Example
 
 ```js
-import React from 'react';
+import React, { useState } from 'react';
 import { useCustomEvent, useEmitter, useListener } from 'react-custom-events-hooks';
 
 /* ------ Emit + Listen Example ------ */
