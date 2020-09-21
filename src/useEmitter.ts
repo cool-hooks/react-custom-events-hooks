@@ -1,8 +1,11 @@
-export const useEmitter = <T>(eventName: string) => {
+export const useEmitter = <T>(
+  eventName: string,
+  element: any = window /*TODO*/
+) => {
   const callEvent = <T>(data: T) => {
     const event = new CustomEvent(eventName, { detail: data });
 
-    window.dispatchEvent(event);
+    element.dispatchEvent(event);
   };
 
   return callEvent;

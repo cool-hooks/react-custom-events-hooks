@@ -2,15 +2,17 @@ import { useEffect } from 'react';
 
 export const useListener = (
   eventName: string,
-  onSignal: (e: CustomEvent) => void
+  onSignal: (e: CustomEvent) => void,
+  element: any = window, // TODO
+  options: any = {} // TODO
 ) => {
   useEffect(() => {
     const handleSignal = (e: Event) => {
       if (onSignal) onSignal(e as CustomEvent);
     };
 
-    window.addEventListener(eventName, handleSignal);
+    element.addEventListener(eventName, handleSignal, options);
 
-    return () => window.removeEventListener(eventName, handleSignal);
+    return () => element.removeEventListener(eventName, handleSignal, options); // TODO options
   }, []);
 };

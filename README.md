@@ -1,11 +1,11 @@
-# [react-custom-events](https://github.com/cool-hooks/react-custom-events)
+# [react-custom-events-hooks](https://github.com/cool-hooks/react-custom-events-hooks)
 
-[![NPM version](http://img.shields.io/npm/v/react-custom-events?style=flat-square)](https://www.npmjs.com/package/react-custom-events)
-[![NPM downloads](http://img.shields.io/npm/dm/react-custom-events?style=flat-square)](https://www.npmjs.com/package/react-custom-events)
-[![NPM license](https://img.shields.io/npm/l/react-custom-events?style=flat-square)](https://www.npmjs.com/package/react-custom-events)
-[![Codecov](https://img.shields.io/codecov/c/github/cool-hooks/react-custom-events?style=flat-square)](https://codecov.io/gh/cool-hooks/react-custom-events)
-[![Travis](https://img.shields.io/travis/cool-hooks/react-custom-events/master?style=flat-square)](https://travis-ci.org/cool-hooks/react-custom-events)
-[![Bundle size](https://img.shields.io/bundlephobia/min/react-custom-events?style=flat-square)](https://bundlephobia.com/result?p=react-custom-events)
+[![NPM version](http://img.shields.io/npm/v/react-custom-events-hooks?style=flat-square)](https://www.npmjs.com/package/react-custom-events-hooks)
+[![NPM downloads](http://img.shields.io/npm/dm/react-custom-events-hooks?style=flat-square)](https://www.npmjs.com/package/react-custom-events-hooks)
+[![NPM license](https://img.shields.io/npm/l/react-custom-events-hooks?style=flat-square)](https://www.npmjs.com/package/react-custom-events-hooks)
+[![Codecov](https://img.shields.io/codecov/c/github/cool-hooks/react-custom-events-hooks?style=flat-square)](https://codecov.io/gh/cool-hooks/react-custom-events-hooks)
+[![Travis](https://img.shields.io/travis/cool-hooks/react-custom-events-hooks/master?style=flat-square)](https://travis-ci.org/cool-hooks/react-custom-events-hooks)
+[![Bundle size](https://img.shields.io/bundlephobia/min/react-custom-events-hooks?style=flat-square)](https://bundlephobia.com/result?p=react-custom-events-hooks)
 
 ## About
 
@@ -13,7 +13,7 @@ Create custom events. Fast, simple, fun
 
 ### Alternatives
 
-- [react-custom-events](https://github.com/HarshRohila/react-custom-events) by [Harsh Rohila](https://github.com/HarshRohila)
+- [react-custom-events-hooks](https://github.com/HarshRohila/react-custom-events-hooks) by [Harsh Rohila](https://github.com/HarshRohila)
 - [@use-it/event-listener](https://github.com/donavon/use-event-listener) by [Donavon West](https://github.com/donavon)
 - [react-event-hooks](https://github.com/Eldorean/react-events-hooks) by [Silvester Wilson Wennekers](https://github.com/Eldorean)
 
@@ -22,13 +22,13 @@ Create custom events. Fast, simple, fun
 First, install the library in your project by npm:
 
 ```sh
-$ npm install react-custom-events
+$ npm install react-custom-events-hooks
 ```
 
 Or Yarn:
 
 ```sh
-$ yarn add react-custom-events
+$ yarn add react-custom-events-hooks
 ```
 
 ## Getting Started
@@ -36,7 +36,7 @@ $ yarn add react-custom-events
 **• Import hooks in React application file:**
 
 ```js
-import { useCustomEvent, useEmitter, useListener } from 'react-custom-events';
+import { useCustomEvent, useEmitter, useListener } from 'react-custom-events-hooks';
 ```
 
 #### Returned Values
@@ -45,7 +45,7 @@ import { useCustomEvent, useEmitter, useListener } from 'react-custom-events';
 
 ```js
 import React from 'react';
-import { useCustomEvent, useEmitter, useListener } from 'react-custom-events';
+import { useCustomEvent, useEmitter, useListener } from 'react-custom-events-hooks';
 
 /* ------ Emit + Listen Example ------ */
 

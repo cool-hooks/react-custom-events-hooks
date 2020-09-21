@@ -1,4 +1,4 @@
-# react-custom-events Changelog
+# react-custom-events-hooks Changelog
 
 ## 1.0.0 (Soon)
 
