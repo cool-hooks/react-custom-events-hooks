@@ -9,7 +9,7 @@
 
 ## About
 
-Create custom events. Fast, simple, fun
+Create custom events. Fast, simple, fun!
 
 ### Alternatives
 
@@ -36,7 +36,11 @@ $ yarn add react-custom-events-hooks
 **• Import hooks in React application file:**
 
 ```js
-import { useCustomEvent, useEmitter, useListener } from 'react-custom-events-hooks';
+import {
+  useCustomEvent,
+  useEmitter,
+  useListener,
+} from 'react-custom-events-hooks';
 ```
 
 #### Returned Values
@@ -45,7 +49,11 @@ import { useCustomEvent, useEmitter, useListener } from 'react-custom-events-hoo
 
 ```js
 import React, { useState } from 'react';
-import { useCustomEvent, useEmitter, useListener } from 'react-custom-events-hooks';
+import {
+  useCustomEvent,
+  useEmitter,
+  useListener,
+} from 'react-custom-events-hooks';
 
 /* ------ Emit + Listen Example ------ */
 

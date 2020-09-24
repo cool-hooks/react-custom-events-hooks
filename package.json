@@ -1,7 +1,7 @@
 {
   "name": "react-custom-events-hooks",
-  "version": "0.0.0",
-  "description": "Create custom events. Fast, simple, fun",
+  "version": "0.0.1",
+  "description": "Create custom events. Fast, simple, fun!",
   "author": "Jakub Biesiada",
   "license": "MIT",
   "main": "lib/react-custom-events-hooks.cjs.js",
