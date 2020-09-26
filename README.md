@@ -43,8 +43,6 @@ import {
 } from 'react-custom-events-hooks';
 ```
 
-#### Returned Values
-
 #### Example
 
 ```js

@@ -1,18 +1,20 @@
 import { useEffect } from 'react';
 
+import type { Element, Options } from './types';
+
 export const useListener = (
   eventName: string,
   onSignal: (e: CustomEvent) => void,
-  element: any = window, // TODO
-  options: any = {} // TODO
+  element: Element = window,
+  options: Options = {}
 ) => {
   useEffect(() => {
     const handleSignal = (e: Event) => {
-      if (onSignal) onSignal(e as CustomEvent);
+      onSignal(e as CustomEvent);
     };
 
     element.addEventListener(eventName, handleSignal, options);
 
-    return () => element.removeEventListener(eventName, handleSignal, options); // TODO options
-  }, []);
+    return () => element.removeEventListener(eventName, handleSignal, options);
+  }, [element, eventName, onSignal, options]);
 };
