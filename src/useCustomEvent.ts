@@ -4,7 +4,7 @@ import { useEmitter } from './useEmitter';
 import type { Element, Options } from './types';
 
 interface Params {
-  readonly eventName: string;
+  readonly eventName: string | string[];
   onSignal?: (e: CustomEvent) => void;
   readonly element?: Element;
   readonly options?: Options;
