@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import type { Element, Options } from './types';
 
 export const useListener = (
-  eventName: string,
+  eventName: string | string[],
   onSignal: (e: CustomEvent) => void,
   element: Element = window,
   options: Options = {}
@@ -13,8 +13,17 @@ export const useListener = (
       onSignal(e as CustomEvent);
     };
 
-    element.addEventListener(eventName, handleSignal, options);
+    const x = (eventName: string) => {
+      element.addEventListener(eventName, handleSignal, options);
 
-    return () => element.removeEventListener(eventName, handleSignal, options);
+      return () =>
+        element.removeEventListener(eventName, handleSignal, options);
+    };
+
+    if (typeof eventName === 'string') {
+      x(eventName);
+    } else {
+      eventName.map((z) => x(z));
+    }
   }, [element, eventName, onSignal, options]);
 };
