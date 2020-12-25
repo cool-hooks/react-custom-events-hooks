@@ -1,3 +1,3 @@
-export { useEmitter } from './useEmitter';
-export { useListener } from './useListener';
-export { useCustomEvent } from './useCustomEvent';
+export { useEmitter } from './hooks/useEmitter';
+export { useListener } from './hooks/useListener';
+export { useCustomEvent } from './hooks/useCustomEvent';

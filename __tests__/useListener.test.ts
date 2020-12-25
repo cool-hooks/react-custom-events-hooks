@@ -1,8 +1,8 @@
 import { renderHook } from '@testing-library/react-hooks';
 
-import { useCustomEvent } from '../src';
+import { useCustomEvent, useListener } from '../src';
 
-describe('useCustomEvent', () => {
+describe('useListener', () => {
   it('should', () => {
     const { result } = renderHook(() =>
       useCustomEvent({ eventName: 'myAwesomeCustomEvent' })

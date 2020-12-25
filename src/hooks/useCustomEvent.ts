@@ -1,24 +1,24 @@
 import { useListener } from './useListener';
 import { useEmitter } from './useEmitter';
 
-import type { Element, Options } from './types';
+import type { Element, Options } from '../types';
 
-interface Params {
+interface Params<T> {
   readonly eventName: string;
-  onSignal?: (e: CustomEvent) => void;
+  onSignal?: (e: CustomEvent<T>) => void;
   readonly element?: Element;
   readonly options?: Options;
 }
 
-export const useCustomEvent = ({
+export const useCustomEvent = <T>({
   eventName,
   onSignal,
   element = window,
   options = {},
-}: Params) => {
+}: Params<T>) => {
   const handleSignal = onSignal || (() => null);
 
-  useListener(eventName, handleSignal, element, options);
+  useListener<T>(eventName, handleSignal, element, options);
 
-  return useEmitter(eventName, element);
+  return useEmitter<T>(eventName, element);
 };
