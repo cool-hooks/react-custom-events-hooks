@@ -11,6 +11,10 @@
 
 Create custom events. Fast, simple, fun!
 
+### Demo
+
+<!-- TODO -->
+
 ### Alternatives
 
 - [react-custom-events-hooks](https://github.com/HarshRohila/react-custom-events-hooks) by [Harsh Rohila](https://github.com/HarshRohila)
