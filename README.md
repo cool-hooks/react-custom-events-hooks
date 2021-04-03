@@ -13,7 +13,7 @@ Create custom events. Fast, simple, fun!
 
 ### Demo
 
-<!-- TODO -->
+**[Playground – play with library in CodeSandbox](https://codesandbox.io/s/react-custom-events-hooks-i9eu2)**
 
 ### Alternatives
 
