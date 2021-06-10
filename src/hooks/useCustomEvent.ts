@@ -11,7 +11,7 @@ export const useCustomEvent = <T>({
   element = window,
   options = {},
 }: Params<T>) => {
-  const handleSignal = useMemo(() => onSignal || (() => null), []);
+  const handleSignal = useMemo(() => onSignal || (() => null), [onSignal]);
 
   useListener<T>({ eventName, onSignal: handleSignal, element, options });
 
