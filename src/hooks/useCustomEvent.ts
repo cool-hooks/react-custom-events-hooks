@@ -1,14 +1,9 @@
+import { useMemo } from 'react';
+
 import { useListener } from './useListener';
 import { useEmitter } from './useEmitter';
 
-import type { Element, Options } from '../types';
-
-interface Params<T> {
-  readonly eventName: string;
-  onSignal?: (e: CustomEvent<T>) => void;
-  readonly element?: Element;
-  readonly options?: Options;
-}
+import { Params } from '../types/Params';
 
 export const useCustomEvent = <T>({
   eventName,
@@ -16,9 +11,9 @@ export const useCustomEvent = <T>({
   element = window,
   options = {},
 }: Params<T>) => {
-  const handleSignal = onSignal || (() => null);
+  const handleSignal = useMemo(() => onSignal || (() => null), []);
 
-  useListener<T>(eventName, handleSignal, element, options);
+  useListener<T>({ eventName, onSignal: handleSignal, element, options });
 
   return useEmitter<T>(eventName, element);
 };
