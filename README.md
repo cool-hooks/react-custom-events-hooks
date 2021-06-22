@@ -11,6 +11,10 @@
 
 Create custom events. Fast, simple, fun!
 
+### Demo
+
+**[Playground – play with library in CodeSandbox](https://codesandbox.io/s/react-custom-events-hooks-i9eu2)**
+
 ### Alternatives
 
 - [react-custom-events-hooks](https://github.com/HarshRohila/react-custom-events-hooks) by [Harsh Rohila](https://github.com/HarshRohila)
