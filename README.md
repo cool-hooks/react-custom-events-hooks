@@ -4,7 +4,7 @@
 [![NPM downloads](https://img.shields.io/npm/dm/react-custom-events-hooks?style=flat-square)](https://www.npmjs.com/package/react-custom-events-hooks)
 [![NPM license](https://img.shields.io/npm/l/react-custom-events-hooks?style=flat-square)](https://www.npmjs.com/package/react-custom-events-hooks)
 [![Codecov](https://img.shields.io/codecov/c/github/cool-hooks/react-custom-events-hooks?style=flat-square)](https://codecov.io/gh/cool-hooks/react-custom-events-hooks)
-[![Travis](https://img.shields.io/travis/cool-hooks/react-custom-events-hooks/master?style=flat-square)](https://travis-ci.org/cool-hooks/react-custom-events-hooks)
+[![Travis](https://img.shields.io/travis/com/cool-hooks/react-custom-events-hooks/master?style=flat-square)](https://app.travis-ci.com/github/cool-hooks/react-custom-events-hooks)
 [![Bundle size](https://img.shields.io/bundlephobia/min/react-custom-events-hooks?style=flat-square)](https://bundlephobia.com/result?p=react-custom-events-hooks)
 
 ## About
@@ -37,7 +37,7 @@ $ yarn add react-custom-events-hooks
 
 ## Getting Started
 
-**• Import hooks in React application file:**
+**• Import hooks in the React application file:**
 
 ```js
 import {
@@ -47,7 +47,7 @@ import {
 } from 'react-custom-events-hooks';
 ```
 
-#### Example
+### Example
 
 ```js
 import React, { useState } from 'react';
