@@ -30,25 +30,27 @@ describe('useListener', () => {
   it('should call onSignal when custom event is emitted', () => {
     const onSignal = jest.fn();
 
-    renderHook(() => 
+    renderHook(() =>
       useListener({
         eventName: 'myAwesomeCustomEvent',
         onSignal,
       })
-    )
+    );
 
-    window.dispatchEvent(new CustomEvent('myAwesomeCustomEvent', {
-      detail: {
-        title: 'hello',
-        message: 'world',
-      }
-    }))
+    window.dispatchEvent(
+      new CustomEvent('myAwesomeCustomEvent', {
+        detail: {
+          title: 'hello',
+          message: 'world',
+        },
+      })
+    );
 
     expect(onSignal).toHaveBeenCalledWith({
       title: 'hello',
       message: 'world',
     });
-  })
+  });
 
   // it.todo('onSignal call')
   // it.todo('no onSignal') ?
@@ -60,38 +62,40 @@ describe('useListener', () => {
 
     const element = document.createElement('div');
 
-    renderHook(() => 
+    renderHook(() =>
       useListener({
         eventName: 'myAwesomeCustomEvent',
         onSignal: onSignalElement,
         element,
       })
-    )
+    );
 
-    renderHook(() => 
+    renderHook(() =>
       useListener({
         eventName: 'myAwesomeCustomEvent',
         onSignal: onSignalWindow,
       })
-    )
+    );
 
-    element.dispatchEvent(new CustomEvent('myAwesomeCustomEvent', {
-      detail: {
-        title: 'hello',
-        message: 'world',
-      }
-    }))
+    element.dispatchEvent(
+      new CustomEvent('myAwesomeCustomEvent', {
+        detail: {
+          title: 'hello',
+          message: 'world',
+        },
+      })
+    );
 
     expect(onSignalElement).toHaveBeenCalledWith({
       title: 'hello',
       message: 'world',
     });
 
-    expect(onSignalWindow).not.toHaveBeenCalled()
-  })
+    expect(onSignalWindow).not.toHaveBeenCalled();
+  });
 
-  it.todo('multiple calls one by one')
+  it.todo('multiple calls one by one');
 
   // it.todo('custom element')
-  it.todo('options')
+  it.todo('options');
 });

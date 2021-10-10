@@ -27,12 +27,12 @@
   },
   "keywords": [
     "react",
+    "hooks",
     "events",
-    "emitter",
-    "listener",
     "observable",
-    // signals
-    "hooks"
+    "listener",
+    "signals",
+    "emitter"
   ],
   "bugs": {
     "url": "https://github.com/cool-hooks/react-custom-events-hooks/issues"

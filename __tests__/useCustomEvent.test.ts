@@ -35,6 +35,6 @@ describe('useCustomEvent', () => {
     });
   });
 
-  it.todo('custom element')
-  it.todo('options')
+  it.todo('custom element');
+  it.todo('options');
 });
