@@ -26,12 +26,12 @@
     "url": "https://github.com/cool-hooks/react-custom-events-hooks.git"
   },
   "keywords": [
-    // TODO
     "react",
     "events",
     "emitter",
     "listener",
-    "observable", // ?
+    "observable",
+    // signals
     "hooks"
   ],
   "bugs": {

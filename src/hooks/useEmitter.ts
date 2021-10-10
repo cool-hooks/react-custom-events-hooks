@@ -4,7 +4,6 @@ import type { ObservedElement } from '../types';
 
 type CallEventCallback<T> = (data: T) => void;
 
-// TODO allow eventName as param in callEvent
 export const useEmitter = <T>(eventName: string, element: ObservedElement = window) => {
   const callEvent = useCallback<CallEventCallback<T>>(
     (data) => {

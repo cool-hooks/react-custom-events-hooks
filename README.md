@@ -9,19 +9,16 @@
 
 ## About
 
-<!-- TODO -->
 Create custom events. Fast, simple, fun!
 
 ### Alternatives
 
-<!-- TODO -->
 - [react-custom-events-hooks](https://github.com/HarshRohila/react-custom-events-hooks) by [Harsh Rohila](https://github.com/HarshRohila)
 - [@use-it/event-listener](https://github.com/donavon/use-event-listener) by [Donavon West](https://github.com/donavon)
 - [react-event-hooks](https://github.com/Eldorean/react-events-hooks) by [Silvester Wilson Wennekers](https://github.com/Eldorean)
 
 ## How to Install
 
-<!-- TODO -->
 First, install the library in your project by npm:
 
 ```sh
@@ -36,8 +33,7 @@ $ yarn add react-custom-events-hooks
 
 ## Getting Started
 
-<!-- TODO -->
-**• Import hooks in React application file:**
+**• Import hooks in the React application file:**
 
 ```js
 import {
@@ -47,7 +43,7 @@ import {
 } from 'react-custom-events-hooks';
 ```
 
-#### Example
+### Example
 
 ```js
 import React, { useState } from 'react';
