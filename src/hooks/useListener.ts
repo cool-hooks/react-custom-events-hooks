@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import { Params } from '../types/Params';
+import { Params } from '../types';
 
 export const useListener = <T>({
   eventName,
@@ -8,6 +8,7 @@ export const useListener = <T>({
   element = window,
   options = {},
 }: Params<T>) => {
+  // TODO callback (returned from hook?)
   useEffect(() => {
     if (typeof onSignal === 'function') {
       const handleSignal = (e: Event) => onSignal(e as CustomEvent);

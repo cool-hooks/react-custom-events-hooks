@@ -1,37 +1,97 @@
 import { renderHook } from '@testing-library/react-hooks';
 
-import { useCustomEvent, useListener } from '../src';
+import { useListener } from '../src';
 
 describe('useListener', () => {
-  it('should', () => {
-    const { result } = renderHook(() =>
-      useCustomEvent({ eventName: 'myAwesomeCustomEvent' })
-    );
+  // it('should', () => {
+  //   const onSignal = jest.fn();
 
-    result.current('hello');
-  });
+  //   const { result } = renderHook(() =>
+  //     useListener({
+  //       eventName: 'myAwesomeCustomEvent',
+  //       defaultValue: {
+  //         sender: 'dummy-sender',
+  //       },
+  //       onSignal,
+  //     })
+  //   );
 
-  it('should', () => {
+  //   result.current({
+  //     title: 'hello',
+  //     message: 'world',
+  //   });
+
+  //   expect(onSignal).toHaveBeenCalledWith({
+  //     title: 'hello',
+  //     message: 'world',
+  //   });
+  // });
+
+  it('should call onSignal when custom event is emitted', () => {
     const onSignal = jest.fn();
 
-    const { result } = renderHook(() =>
-      useCustomEvent({
+    renderHook(() => 
+      useListener({
         eventName: 'myAwesomeCustomEvent',
-        defaultValue: {
-          sender: 'dummy-sender',
-        },
         onSignal,
       })
-    );
+    )
 
-    result.current({
-      title: 'hello',
-      message: 'world',
-    });
+    window.dispatchEvent(new CustomEvent('myAwesomeCustomEvent', {
+      detail: {
+        title: 'hello',
+        message: 'world',
+      }
+    }))
 
     expect(onSignal).toHaveBeenCalledWith({
       title: 'hello',
       message: 'world',
     });
-  });
+  })
+
+  // it.todo('onSignal call')
+  // it.todo('no onSignal') ?
+
+  // TODO custom element
+  it('should ', () => {
+    const onSignalElement = jest.fn();
+    const onSignalWindow = jest.fn();
+
+    const element = document.createElement('div');
+
+    renderHook(() => 
+      useListener({
+        eventName: 'myAwesomeCustomEvent',
+        onSignal: onSignalElement,
+        element,
+      })
+    )
+
+    renderHook(() => 
+      useListener({
+        eventName: 'myAwesomeCustomEvent',
+        onSignal: onSignalWindow,
+      })
+    )
+
+    element.dispatchEvent(new CustomEvent('myAwesomeCustomEvent', {
+      detail: {
+        title: 'hello',
+        message: 'world',
+      }
+    }))
+
+    expect(onSignalElement).toHaveBeenCalledWith({
+      title: 'hello',
+      message: 'world',
+    });
+
+    expect(onSignalWindow).not.toHaveBeenCalled()
+  })
+
+  it.todo('multiple calls one by one')
+
+  // it.todo('custom element')
+  it.todo('options')
 });

@@ -3,7 +3,7 @@ import { renderHook } from '@testing-library/react-hooks';
 import { useCustomEvent } from '../src';
 
 describe('useCustomEvent', () => {
-  it('should', () => {
+  it('should emit custom event', () => {
     const { result } = renderHook(() =>
       useCustomEvent({ eventName: 'myAwesomeCustomEvent' })
     );
@@ -11,7 +11,7 @@ describe('useCustomEvent', () => {
     result.current('hello');
   });
 
-  it('should', () => {
+  it('should emit and listen to custom event', () => {
     const onSignal = jest.fn();
 
     const { result } = renderHook(() =>
@@ -34,4 +34,7 @@ describe('useCustomEvent', () => {
       message: 'world',
     });
   });
+
+  it.todo('custom element')
+  it.todo('options')
 });

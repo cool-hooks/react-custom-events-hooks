@@ -19,5 +19,7 @@ export default {
     },
   ],
   plugins: [resolve(), typescript(), terser()],
-  external: Object.keys(pkg.peerDependencies || {}), // TODO add fallback for dependencies
+  // TODO
+  // TODO || => ??
+  external: Object.keys(pkg.peerDependencies || {}),
 };

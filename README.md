@@ -4,21 +4,24 @@
 [![NPM downloads](https://img.shields.io/npm/dm/react-custom-events-hooks?style=flat-square)](https://www.npmjs.com/package/react-custom-events-hooks)
 [![NPM license](https://img.shields.io/npm/l/react-custom-events-hooks?style=flat-square)](https://www.npmjs.com/package/react-custom-events-hooks)
 [![Codecov](https://img.shields.io/codecov/c/github/cool-hooks/react-custom-events-hooks?style=flat-square)](https://codecov.io/gh/cool-hooks/react-custom-events-hooks)
-[![Travis](https://img.shields.io/travis/cool-hooks/react-custom-events-hooks/master?style=flat-square)](https://travis-ci.org/cool-hooks/react-custom-events-hooks)
+[![Travis](https://img.shields.io/travis/com/cool-hooks/react-custom-events-hooks/master?style=flat-square)](https://app.travis-ci.com/github/cool-hooks/react-custom-events-hooks)
 [![Bundle size](https://img.shields.io/bundlephobia/min/react-custom-events-hooks?style=flat-square)](https://bundlephobia.com/result?p=react-custom-events-hooks)
 
 ## About
 
+<!-- TODO -->
 Create custom events. Fast, simple, fun!
 
 ### Alternatives
 
+<!-- TODO -->
 - [react-custom-events-hooks](https://github.com/HarshRohila/react-custom-events-hooks) by [Harsh Rohila](https://github.com/HarshRohila)
 - [@use-it/event-listener](https://github.com/donavon/use-event-listener) by [Donavon West](https://github.com/donavon)
 - [react-event-hooks](https://github.com/Eldorean/react-events-hooks) by [Silvester Wilson Wennekers](https://github.com/Eldorean)
 
 ## How to Install
 
+<!-- TODO -->
 First, install the library in your project by npm:
 
 ```sh
@@ -33,6 +36,7 @@ $ yarn add react-custom-events-hooks
 
 ## Getting Started
 
+<!-- TODO -->
 **• Import hooks in React application file:**
 
 ```js

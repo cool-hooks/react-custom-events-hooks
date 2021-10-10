@@ -1,6 +1,6 @@
 {
   "name": "react-custom-events-hooks",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Create custom events. Fast, simple, fun!",
   "author": "Jakub Biesiada",
   "license": "MIT",
@@ -17,18 +17,21 @@
     "lint": "eslint 'src/**/*.{tsx,ts}' --fix",
     "prettier": "prettier --write 'src/**/*.{tsx,ts}'",
     "commit": "git-cz",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "prepare": "husky install",
+    "pre-commit": "lint-staged"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/cool-hooks/react-custom-events-hooks.git"
   },
   "keywords": [
+    // TODO
     "react",
     "events",
     "emitter",
     "listener",
-    "observable",
+    "observable", // ?
     "hooks"
   ],
   "bugs": {
@@ -74,11 +77,6 @@
   "jest": {
     "transform": {
       "^.+\\.tsx?$": "ts-jest"
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
