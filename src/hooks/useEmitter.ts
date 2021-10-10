@@ -8,9 +8,12 @@ export const useEmitter = <T>(
   eventName: string,
   element: ObservedElement = window
 ) => {
+  // TODO add options
   const callEvent = useCallback<CallEventCallback<T>>(
     (data) => {
-      const event = new CustomEvent(eventName, { detail: data });
+      const event = new CustomEvent(eventName, {
+        detail: data /* ...options */,
+      });
 
       element.dispatchEvent(event);
     },
